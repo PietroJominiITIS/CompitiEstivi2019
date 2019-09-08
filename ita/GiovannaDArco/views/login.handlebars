@@ -1,0 +1,31 @@
+{{#if logged}}
+  <h3 class="pt-5 text-center justify-content-center">
+    You are logged!
+    <a class="pl-2 text-center justify-content-center" href="/logout">Logout</a>
+  </h3>
+{{else}}
+  <script type="text/javascript">
+    $(() => {
+      $('input#inputId').focus();
+    });
+  </script>
+  <form class="form pt-5" method="post" action="/login">
+    <h3 class="pt-5 text-center justify-content-center">Login</h3>
+    <div class="form-group row pt-4">
+      <label for="inputId" class="col-sm-1 col-form-label">Password</label>
+      <div class="col">
+        <input type="password" class="form-control" id="inputId" placeholder="Password" name="passw">
+      </div>
+    </div>
+    <div class="form-group row">
+      <div class="col text-center">
+        <button type="submit" class="btn btn-outline-success">Login</button>
+        {{#if badRequest}}
+          <small class="py-1 pl-3 text-center justify-content-center text-danger">Wrong password!</small>
+        {{else if loggedOut}}
+          <small class="py-1 pl-3 text-center justify-content-center text-success">Successfully logged out!</small>
+        {{/if}}
+      </div>
+    </div>
+  </form>
+{{/if}}

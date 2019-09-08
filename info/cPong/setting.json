@@ -1,0 +1,36 @@
+{
+    "gui": {
+        "width": 1000,
+        "height": 700,
+        "playeWidth": 20,
+        "playerHeight": 100,
+        "ballRadius": 10,
+        "servgingPadding": 50,
+        "bgColor": {
+            "r": 0,
+            "g": 0,
+            "b": 0
+        },
+        "font": {
+            "pixelToPointRatio": 0.75,
+            "path": "./TTB/TTB.ttf",
+            "size": {
+                "small": 20,
+                "big": 100
+            },
+            "fontColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+            }
+        }
+    },
+    "physics": {
+        "speed": {
+            "player": 10,
+            "ball": 10
+        },
+        "desiredFPS": 60,
+        "winningScore": 2
+    }
+}

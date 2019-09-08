@@ -1,0 +1,25 @@
+{
+  "name": "giovannadarco",
+  "version": "1.0.0",
+  "description": "Analisi della morfologia legata a giovanna d'argo nei testi moderni",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index",
+    "start": "node index"
+  },
+  "author": "Pietro Jomini",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.4",
+    "crypto": "^1.0.1",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "multilingual-stemmer": "^1.0.2",
+    "natural": "^0.6.3",
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}

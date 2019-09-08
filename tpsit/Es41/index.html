@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Pietro Jomini">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="./main.js" charset="utf-8"></script>
+  <title>Es. 41</title>
+</head>
+<body>
+  <div class="container jumbotron mt-5">
+    <h1 class="text-center w-100">
+      Es. 41
+    </h1>
+    <p>
+      Crea un form per consentire a un utente di inviare una richiesta di assistenza per un elettrodomestico al servizio clienti.
+    </p>
+  </div>
+  <div class="container mt-2">
+      <form action="/addTonewsletter"  method="POST">
+        <div class="container mt-3">
+          <div class="row p-2">
+            <div class="form-group col">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="Email" name="email">
+            </div>
+          </div>
+          <div class="row p-2">
+            <div class="form-group col">
+              <label for="support">What do you need support for?</label>
+              <textarea name="support" id="support" class="form-control"></textarea>
+            </div>
+          </div>
+          <div class="row p-2">
+            <div class="form-check m-3">
+                <input class="form-check-input mr-2" type="checkbox" id="auth" value="auth">
+                <label class="form-check-label" for="auth">
+                  Ho letto e accettao le direttive sulla privacy
+                </label>
+              </div>
+          </div>
+          <div class="row p-2">
+              <buttton class="ml-3 btn btn-outline-success" type="submit" disabled>Iscrivimi!</buttton>
+          </div>
+        </div>
+      </form>
+  </div>
+</body>
+</html>

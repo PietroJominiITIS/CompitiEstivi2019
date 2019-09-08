@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Pietro Jomini">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="./main.js" charset="utf-8"></script>
+  <title>Es. 39</title>
+</head>
+<body>
+  <div class="container jumbotron mt-5">
+    <h1 class="text-center w-100">
+      Es. 39
+    </h1>
+    <p>
+      Crea una pagina Web che simuli gli acquisti on-line presentando un form con due caselle: la prima per inserire il prezzo del prodotto
+      che si vuole acquistare e la seconda per visualizzare il totale degli acquisti. Dopo aver inserito un prozzo l'utente deve fare clic sul pulsante <i>Aggiungi al carrello</i> per ottenere il totale progressivo.
+    </p>
+  </div>
+  <div class="container mt-3">
+    <div class="row p-2">
+      <div class="col p-2">
+        <div class="form-group">
+            <label for="price">Insert price</label>
+            <input type="number" min="0" step="0.01" class="form-control" id="price" placeholder="€">
+        </div>
+      </div>
+      <div class="col p-2">
+          <div class="form-group">
+              <label for="confirm">Confirm</label>
+              <button id="confirm" class="btn btn-outline-success btn-block">Aggiungi al carrello</button>
+          </div>
+        </div>
+    </div>
+    <div class="row p-2">
+      <div class="col p-2">
+        <div class="form-group">
+            <label for="totale">Totale</label>
+            <input readonly type="text" class="form-control" id="totale" placeholder="€">
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

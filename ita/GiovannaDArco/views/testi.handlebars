@@ -1,0 +1,56 @@
+<div class="container">
+  <h3 class="p-3 text-center justify-content-center">Testi</h3>
+  <ul class="list-group pb-3">
+    {{#each testi}}
+      <li class="list-group-item d-flex justify-content-between align-items-center" style="border-left: 3px solid {{#if this.acc}}#30c553{{else}}#ffbe00{{/if}}">
+        <a class="text-primary" href="/testo?id={{this.id}}">
+          {{this.title}}
+        </a>
+        <form class="form-inline" action="/rmText" method="post">
+          <button type="submit" name="id" class="btn btn-outline-danger" value="{{this.id}}">Rimuovi</button>
+        </form>
+      </li>
+    {{/each}}
+  </ul>
+  {{#if logged}}
+    <form class="form pt-2" method="post" action="/addText">
+      <h3 class="pt-5 text-center justify-content-center">Aggiungi un testo</h3>
+      <div class="form-group row pt-4">
+        <label for="inputId" class="col-sm-1 col-form-label">Titolo</label>
+        <div class="col">
+          <input type="text" class="form-control" id="inputId" placeholder="Titolo" name="title">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="inputTesto" class="col-sm-1 col-form-label">Testo</label>
+        <div class="col">
+          <textarea class="form-control" id="inputTesto" placeholder="Testo" name="text"></textarea>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="inputFonte" class="col-sm-1 col-form-label">Fonte</label>
+        <div class="col">
+          <input type="text" class="form-control" id="inputFonte" placeholder="Fonte" name="origin">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="inputAcc" class="col-sm-1 col-form-label">Fonte accademica</label>
+        <div class="col">
+          <input type="checkbox" id="inputAcc" name="acc" value="acc" class="mt-3">
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col text-center">
+          <button type="submit" class="btn btn-outline-success">Aggiungi</button>
+        </div>
+      </div>
+    </form>
+    <script type="text/javascript">
+      $(() => {
+        $('input#addText').focus();
+      });
+    </script>
+    {{else}}
+      <h6 class="p-3 text-center justify-content-center"><a href="/login">Login to add texts</a></h6>
+    {{/if}}
+</div>

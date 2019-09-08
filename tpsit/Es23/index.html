@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Pietro Jomini">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="./main.js" charset="utf-8"></script>
+  <title>Es. 23</title>
+</head>
+
+<body>
+  <div class="container jumbotron mt-5">
+    <h1 class="text-center w-100">
+      Es. 23
+    </h1>
+    <p>
+      Crea una pagina Web contenennte un player video con pulsanti personalizzati, tra cui avanzamento rapido al decimo, trentesimo e sessantesimo secondo, incremento e decremento del volume.
+    </p>
+  </div>
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-sm">
+        <video id="video">
+          <source src="iWantToBreakFree.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="col-sm">
+        <center>
+          <p class="pt-5">Basic controls: <span id="status">Paused</span></p>
+          <div class="btn-group" role="group">
+            <button type="button" id="play" class="btn btn-outline-success">Play</button>
+            <button type="button" id="pause" class="btn btn-outline-success">Pause</button>
+          </div>
+          <p class="pt-3">Volume: <span id="vol">50</span>%</p>
+          <div class="btn-group" role="group">
+            <button type="button" id="vplus" class="btn btn-outline-success">+</button>
+            <button type="button" id="vminus" class="btn btn-outline-success">-</button>
+          </div>
+          <p class="pt-3">Jump to:</p>
+          <div class="btn-group" role="group">
+            <button type="button" data-to-add="10" class="goto btn btn-outline-success">10s</button>
+            <button type="button" data-to-add="20" class="goto btn btn-outline-success">30s</button>
+            <button type="button" data-to-add="30" class="goto btn btn-outline-success">60s</button>
+          </div>
+        </center>
+      </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Pietro Jomini">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="./main.js" charset="utf-8"></script>
+  <title>Es. 38</title>
+</head>
+<body>
+  <div class="container jumbotron mt-5">
+    <h1 class="text-center w-100">
+      Es. 38
+    </h1>
+    <p>
+      Inserisci in una pagina una casella combinata tramite l'elemento select di un form HTML.
+      La pagina deve poi mostrare in una finestra di dialogo la voce che lutente ha scelto dall'elenco (l'oggetto che gestisce la casella combinata contiene la proprietà <i>selectIndex</i>, che specifica l'indice della voce selezionata). 
+    </p>
+  </div>
+  <div class="container mt-3">
+    <h1 class="p-3">I 14 ottomila:</h1>
+    <select id="sel" class="form-control">
+      <option>Everest</option>
+      <option>K2</option>
+      <option>Kangchenjunga</option>
+      <option>Lhotse</option>
+      <option>Makalu</option>
+      <option>Cho Oyu</option>
+      <option>Dhaulagiri</option>
+      <option>manaslu</option>
+      <option>Nanga Parbat</option>
+      <option>Annapurna</option>
+      <option>Gasherbrum I</option>
+      <option>Broad Peak</option>
+      <option>Gasherbrum II</option>
+      <option>Shisha Pangma</option>
+    </select>
+    <h5 class="text-success p-3">Hai selezionato: <label id="out"><i><small>Seleziona un 8000 per modificare questa label</small></i></label></h5>
+  </div>
+</body>
+</html>

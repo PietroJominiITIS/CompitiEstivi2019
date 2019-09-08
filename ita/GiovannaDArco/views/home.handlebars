@@ -1,0 +1,28 @@
+<div class="row">
+  <div class="col">
+    <div class="container">
+      <h3 class="p-3 text-center">Testi accademici</h3>
+      <ul class="list-group">
+        {{#each wordsAcc}}
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          <a class="text-primary" href="/aknowledgeWord?word={{this.name}}">{{this.name}}</a>
+          <span class="badge badge-primary badge-pill">{{this.count}}</span>
+        </li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+  <div class="col">
+    <div class="container">
+      <h3 class="p-3 text-center">Testi non accademici</h3>
+      <ul class="list-group">
+        {{#each wordsNonAcc}}
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          <a class="text-primary" href="/aknowledgeWord?word={{this.name}}">{{this.name}}</a>
+          <span class="badge badge-primary badge-pill">{{this.count}}</span>
+        </li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+<div class="container">
+  <h3 class="p-3 text-center justify-content-center">Blacklist - Numero di parole: {{nWords}}</h3>
+  <ul class="list-group pb-3">
+    {{#each blacklist}}
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        {{this}}
+        <form class="form-inline" action="/rmWord" method="post">
+          <button type="submit" name="word" class="btn btn-outline-danger" value="{{this}}">Rimuovi</button>
+        </form>
+      </li>
+    {{/each}}
+  </ul>
+  {{#if logged}}
+    <form class="py-3 form" action="/addWord" method="post">
+      <input id="addWord" class="form-control mr-sm-2" placeholder="Aggiungi una parola" name="word">
+    </form>
+    <script type="text/javascript">
+      $(() => {
+        if ({{refocus}}) $('input#addWord').focus();
+      });
+    </script>
+  {{else}}
+    <h6 class="p-3 text-center justify-content-center"><a href="/login">Login to add word to the blacklist</a></h6>
+  {{/if}}
+</div>
