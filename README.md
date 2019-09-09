@@ -1,4 +1,4 @@
-# Comopiti estivi per l'anno 2019
+# Compiti estivi per l'anno 2019
 
 ``` json
 {   
